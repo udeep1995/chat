@@ -1,0 +1,39 @@
+#main {
+	width: 100%;
+}
+
+#left {
+	position: fixed;
+
+	top: 0px;
+	left: 0px;
+
+	width: 25%;
+
+	background-color: red;
+}
+
+#right {
+	position: fixed;
+
+	top: 0px;
+	left: 25%;
+
+	width: 75%;
+
+	background-color: green;
+}
+
+.highlight {
+	background-color: blue;
+	color: white;
+}
+
+.self {
+	background-color: blue;
+}
+
+.other{
+	background-color: yellow;
+}
+
