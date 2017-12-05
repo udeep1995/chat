@@ -7,11 +7,17 @@ var httpServer = http.Server(app);
 
 app.use(express.static(__dirname + '/public'));
 
-httpServer.listen(3000, httpServerConnected);
+const port = process.env.PORT ||3000;
+httpServer.listen(port, httpServerConnected);
+
 function httpServerConnected(){
-	console.log("Web Server started at 3000");
+	console.log("process.env.PORT "+ process.env.PORT);
+	console.log("Web Server started at "+ port);
 }
 
+app.get('/',function(req,res){
+	res.send(index.html);
+})
 // Socket Area
 var ioServer = socketIo(httpServer);
 var allUsers = {};
